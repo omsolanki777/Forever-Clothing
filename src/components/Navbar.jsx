@@ -56,15 +56,17 @@ const Navbar = () => {
 
             {/* Sidebar Menu For Small Screens */}
             <div className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all ${visible ? 'w-full' : 'w-0'}`} >
-                <div className='flex flex-col text-gray-600'>
-                    <div onClick={() => setVisble(false)} className='flex items-center gap-4 p-3 '>
-                        <img className='h-4 rotate-180' src={assets.dropdown_icon} alt="" />
-                        <p>Back</p>
-                    </div>
-                    <NavLink onClick={() => setVisble(false)} to="/" className='py-2 pl-6 border'>HOME</NavLink>
-                    <NavLink onClick={() => setVisble(false)} to='/collection' className='py-2 pl-6 border'>COLLECTION</NavLink>
-                    <NavLink onClick={() => setVisble(false)} to='/about' className='py-2 pl-6 border'>ABOUT</NavLink>
-                    <NavLink onClick={() => setVisble(false)} to='/contact' className='py-2 pl-6 border'>CONTACT</NavLink>
+             <div className='flex flex-col text-gray-600'>
+             <div onClick={() => setVisble(false)} className='flex items-center gap-4 p-3 '>
+             <img className='h-4 rotate-180' src={assets.dropdown_icon} alt="" />
+             <p>Back</p>
+            </div>
+
+             {/* Mobile Nav Links */}
+             <Link to="/" onClick={() => setVisble(false)} className='py-2 pl-6 border'>HOME</Link>
+             <Link to="/collection" onClick={() => setVisble(false)} className='py-2 pl-6 border'>COLLECTION</Link>
+             <Link to="/about" onClick={() => setVisble(false)} className='py-2 pl-6 border'>ABOUT</Link>
+             <Link to="/contact" onClick={() => setVisble(false)} className='py-2 pl-6 border'>CONTACT</Link>
                 </div>
             </div>
         </div>
